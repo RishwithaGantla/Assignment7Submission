@@ -1,0 +1,11 @@
+main {
+    width: 80%; /* Adjust this value for the desired width */
+    margin: 0 auto; /* Centers the main content */
+  }
+  .hidden {
+    display: none;
+  }
+  
+  .visible {
+    display: block;
+  }

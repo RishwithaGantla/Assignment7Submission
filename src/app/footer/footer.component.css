@@ -1,0 +1,26 @@
+.footer-section{
+    width: 100%;
+    text-align: center;
+    padding: 25px 0;
+    background:#b0e0e6;
+    font-weight: 300;
+    margin-top: 20px;
+  }
+  .footer-section i,p {
+    color: #002a38;
+  }
+  
+  .footer-section a{
+    text-decoration: none;
+    font-size: 15px;
+    margin-right: 15px;
+    color: #002a38;
+    display: inline-block;
+    transition: transform 0.5s;
+  }
+  
+  .footer-section a:hover{
+    color:#820418;
+    transform: translateY(-5px);
+  }
+  

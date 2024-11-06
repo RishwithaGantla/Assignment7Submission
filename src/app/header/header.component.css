@@ -1,0 +1,230 @@
+#header {
+    width: 100%;
+    height: 100vh;
+    background-image: url('/assets/final-header.png');
+    background-size:cover;
+    background-position: center;
+    background-attachment: fixed;
+  }
+  
+  .header-container {
+  padding: 10px 10px;
+  }
+  
+  nav {
+    background-color: #002a38;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  
+  .nameLogo{
+    width: 120px;
+  }
+  
+  nav ul li{
+    display: inline-block;
+    list-style:none;
+    margin: 10px 20px;
+  }
+  
+  nav ul li a{
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    position: relative;
+  }
+  
+  nav ul li a::after{
+    content: '';
+    width: 0%;
+    height: 3px;
+    background:#820418 ;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.6s;
+  }
+  nav ul li a:hover:after{
+    width: 100%;
+  }
+  
+  .header-container-text{
+    margin-top: 20%;
+    font-size: 30px;
+  }
+  .header-container-text h1{
+    margin-top: 20px;
+    font-size: 60px;
+  }
+  
+  .header-container-text h1 span{
+  color: #820418;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+      font-family: "Segoe UI", Arial, sans-serif;
+      font-weight: 400;
+      margin: 10px 0
+  }
+  nav .bi{
+    display: none;
+  }
+
+  /*.................................Main Content Media Queries for Small Screens..................................... */
+@media only screen and (max-width: 600px){
+  /*
+Background Image: A smaller, mobile-optimized background image is used to reduce load time.
+  
+Header Text: The margin-top and font sizes are significantly reduced to prevent the header text from 
+    overwhelming the screen. 
+  
+  Navigation: On small screens, navigation switches to a hamburger-style menu, with the "bi" icon now 
+    displayed and enlarged to 25px for easier tapping. 
+  
+  About Section: Flexbox layouts are adjusted.
+  
+  Miscellaneous Elements: Fonts in sections like `.ams-tiles` and the contact form inputs are scaled down 
+    to fit the smaller screen comfortably.
+  
+  Overall Layout: All unnecessary margins are reduced, and elements are reorganized to use the full width 
+    of the small screen, ensuring that content remains the primary focus without any unnecessary white space 
+    or overflow.
+  */
+  #header{
+    background-image: url('/assets/smallscreenFinal.png');
+  }
+  .header-container-text{
+    margin-top:auto;
+    font-size: 14px;
+  }
+  .header-container-text h1{
+    font-size:30px;
+  }
+  
+  nav .bi{
+    display: block;
+    font-size: 25px;
+  }
+
+  nav ul{
+    background: #820418 ;
+    position: fixed;
+    top: 0;
+    right: -200px;
+    width: 200px;
+    height: 100vh;
+    padding-top: 50px;
+    z-index: 2;
+    transition: right 0.5s;
+  }
+  nav ul li {
+    display: block;
+    margin: 25px;
+
+  }
+  nav ul li a::after{
+    background:#002a38 ;
+  }
+  nav ul .bi{
+    position: absolute;
+    top: 25px;
+    left:25px;
+    cursor: pointer;
+    }
+    .about-me-heading{
+      font-size: 40px;
+    }
+    .ps-container-one, .ps-container-two{
+      flex-basis: 100%;
+    }
+    .ps-container-one{
+      margin-bottom: 30px;
+    }
+    .ps-container-two{
+      font-size: 14px;
+    }
+    .ams-tiles{
+      font-size: 16px;
+      margin-right: 20px;
+    }
+    .contact-left, .contact-right {
+      flex-basis: 100%;
+    }
+
+    .header-container-text h1{
+      font-size: 18px;
+    }
+}
+
+/*.................................Main Content Media Queries for Tablet Screens..................................... */
+@media only screen and (min-width: 601px) and (max-width: 1200px) {
+    /* 
+  For tablet screens, a mid-sized background image is used to balance the
+   visual appeal and performance.
+  */
+  #header {
+    background-image: url('/assets/midscreenfinal.png');
+  }
+  .header-container-text {
+    margin-top: 50px;
+    font-size: 18px;
+  }
+   /* 
+  The H1 size is scaled down to 35px for a more proportionate header.
+  */
+  .header-container-text h1 {
+    font-size: 35px;
+  }
+  nav .bi {
+    font-size: 30px;
+  }
+  /* 
+  Unlike small screens, the navigation bar for tablet screens
+   is kept static with the full view.
+  This maintains a desktop-like experience while ensuring the navigation
+   options are easily accessible without occupying too much space.
+  */
+  nav ul {
+    background: none;
+    position: static;
+    width: auto;
+    height: auto;
+    padding-top: 0;
+    display: flex;
+    justify-content: space-around;
+  }
+  nav ul li {
+    display: inline-block;
+    margin: 0 15px;
+  }
+    /* 
+  Removed the hover effects under the navigation links, as on touch devices,
+   hover is less relevant. This prevents unnecessary visual clutter
+  while still maintaining a clean, simplified layout.
+  */
+  nav ul li a::after {
+    background: none;
+  }
+}
+/*.................................Main Content Media Queries for Big Screens..................................... */
+/*....All Main CSS for Large screen
+is already defined above
+so nothing much goes here..... */
+@media only screen and (min-width: 1201px) {
+  #header {
+    background-image: url('/assets/FinalTest.png');
+  }
+  .header-container-text {
+    margin-top: 20%;
+    font-size: 30px;
+  }
+  .header-container-text h1 {
+    font-size: 60px;
+  }
+}

@@ -1,0 +1,56 @@
+<div id="profile-section">
+  <div class="profile-section-container">
+    <div class="about-row">
+      <div class="ps-container-one">
+        <img src="assets/Profile.jpg" alt="Profile Image">
+      </div>
+
+      <div class="ps-container-two">
+        <h1 class="about-me-heading">About Me</h1>
+        <p>Hey there! Myself <span>Rishwitha Gantla.</span> I’m currently pursuing a Master’s degree in
+          Information Systems
+          at Pace University, with a graduation date set for May 2025.
+          I’m a passionate technologist and automation enthusiast with over three
+          years of experience in the IT industry, specializing in Quality Assurance
+          and Automation Testing.</p>
+        <div class="about-me-section">
+          <!-- <div class="ams-tiles active-tile" onclick="opentab('skills')">Skills</div>
+            <div class="ams-tiles" onclick="opentab('education')">Education</div>
+            <div class="ams-tiles" onclick="opentab('experience')">Experience</div> -->
+          <div class="ams-tiles"
+            [class.active-tile]="activeTab === 'skills'" (click)="opentab('skills')">
+            Skills
+          </div>
+          <div class="ams-tiles" [class.active-tile]="activeTab === 'education'" (click)="opentab('education')">
+            Education
+          </div>
+          <div class="ams-tiles" [class.active-tile]="activeTab === 'experience'" (click)="opentab('experience')">
+            Experience
+          </div>
+        </div>
+
+
+        <div class="tile-contents active-content" id="skills">
+          <ul>
+            <li><span>Software Development</span><br>WebApp Development using Dot Net</li>
+            <li><span>Software Testing</span><br>UI and Database Testing</li>
+            <li><span>SAP</span><br>SAP Finance & SD</li>
+          </ul>
+        </div>
+        <div class="tile-contents" id="education">
+          <ul>
+            <li><span>2015-2019</span><br>Bachelors in Electrical and Electronics</li>
+            <li><span>2023-2025</span><br>Masters in Information Systems</li>
+
+          </ul>
+        </div>
+        <div class="tile-contents" id="experience">
+          <ul>
+            <li><span>Prolifics 2019-23</span><br>Software Developer</li>
+
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
