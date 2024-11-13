@@ -1,13 +1,12 @@
-
- <app-loading-animation *ngIf="isLoading"></app-loading-animation>
+<app-loading-animation *ngIf="isLoading"></app-loading-animation>
 
 <div *ngIf="!isLoading" id="content" class="visible">
-<app-header></app-header>
-<main>
+  <app-header></app-header>
+  <main>
     <app-profile></app-profile>
-    <app-projects></app-projects>
+      <app-projects></app-projects>
     <app-portfolio></app-portfolio>
     <app-contact></app-contact>
-</main>
-<app-footer></app-footer>
+  </main>
+  <app-footer></app-footer>
 </div>

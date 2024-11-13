@@ -1,0 +1,4 @@
+<div (touchstart)="createSparkle($event)">
+    <p>Tap anywhere to create a sparkle effect!</p>
+  </div>
+  <div *ngFor="let sparkle of sparkles" class="sparkle" [ngStyle]="{'top.px': sparkle.y, 'left.px': sparkle.x}"></div>

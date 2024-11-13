@@ -1,25 +1,55 @@
+<!-- Popup Modal -->
+<div class="popup-modal" *ngIf="showPopup">
+  <div class="popup-content">
+    <p>Do you want to go to the project link?</p>
+    <button (click)="navigateToLink()">OK</button>
+    <button (click)="closePopup()">Cancel</button>
+  </div>
+</div>
+<div class="popup-modal" *ngIf="shakePopup">
+  <div class="popup-content">
+    <p>The phone is shaking, are you okay?</p>
+    <button (click)="refreshPage()">Refresh</button>
+    <button (click)="closeShakePopup()">Cancel</button>
+  </div>
+</div>
 <div id="projects">
     <div class="project-container">
-      <h1 class="about-me-heading">Projects</h1>
+      <h1 class="about-me-heading parallax">Projects</h1>
       <div class="projects-list">
-        <div>
-          <i class="bi bi-shop"></i>
-          <h2>E-commerce Marketplace for Print on Demand</h2>
-          <p>This project aims to establish an E-commerce platform, titled "Print n Purchase", where designers
-            can showcase and sell their T-shirt designs, while customers can easily browse and buy these
-            designs. The platform promotes collaboration between designers and consumers, enabling them to
-            create and choose designs based on specific requirements.
-            It emphasizes the key aspects of Information Systems Design and Development, such as the
-            effective implementation of the Systems Development Life Cycle (SDLC), emphasizing the
-            importance of system structure, requirement gathering, project initiation, planning, and
-            management. Furthermore, the technical foundation of the project is rooted in a web platform that
-            seamlessly integrates payment processing and Print on Demand T-shirt factory APIs.</p>
-          <a href="https://github.com/RishwithaGantla/E-commerce-Marketplace-for-Print-on-Demand">Learn More!</a>
+        <div class="popup-modal" *ngIf="shakePopup">
+          <div class="popup-content">
+            <p>The phone is shaking, are you okay?</p>
+            <button (click)="refreshPage()">Refresh</button>
+            <button (click)="closeShakePopup()">Cancel</button>
+          </div>
         </div>
-        <div>
+          <div class="windward-container">
+            <i class="bi bi-shop"></i>
+            <h2>E-commerce Marketplace for Print on Demand</h2>
+            <p   (touchstart)="startLongPress('https://github.com/RishwithaGantla/E-commerce-Marketplace-for-Print-on-Demand')" 
+            (touchend)="cancelLongPress()"  
+            (mousedown)="startLongPress('https://github.com/RishwithaGantla/E-commerce-Marketplace-for-Print-on-Demand')"
+            (mouseup)="cancelLongPress()"
+            (mouseleave)="cancelLongPress()">This project aims to establish an E-commerce platform, titled "Print n Purchase", where designers
+              can showcase and sell their T-shirt designs, while customers can easily browse and buy these
+              designs. The platform promotes collaboration between designers and consumers, enabling them to
+              create and choose designs based on specific requirements.
+              It emphasizes the key aspects of Information Systems Design and Development, such as the
+              effective implementation of the Systems Development Life Cycle (SDLC), emphasizing the
+              importance of system structure, requirement gathering, project initiation, planning, and
+              management. Furthermore, the technical foundation of the project is rooted in a web platform that
+              seamlessly integrates payment processing and Print on Demand T-shirt factory APIs.</p>
+            <a href="https://github.com/RishwithaGantla/E-commerce-Marketplace-for-Print-on-Demand">Learn More!</a>
+          </div>
+        <div class="windward-container">
           <i class="bi bi-journal-bookmark"></i>
           <h2>Case Study - Bring Your Own Device</h2>
-          <p>This case study is about a rule called Bring Your Own Device
+          <p (touchstart)="startLongPress('https://github.com/RishwithaGantla/Case-Study---Bring-Your-Own-Device')" 
+          (touchend)="cancelLongPress()" 
+          (mousedown)="startLongPress('https://github.com/RishwithaGantla/Case-Study---Bring-Your-Own-Device')"
+          (mouseup)="cancelLongPress()"
+          (mouseleave)="cancelLongPress()">This case study is about a rule called Bring Your Own Device
             (BYOD) at work, where employees can use their own smartphones for
             work. It talks about the good things and the problems that can
             happen with BYOD. People like using their own smartphones at work
@@ -34,10 +64,14 @@
             iPhones.</p>
           <a href="https://github.com/RishwithaGantla/Case-Study---Bring-Your-Own-Device">Learn More!</a>
         </div>
-        <div>
+        <div class="windward-container">
           <i class="bi bi-router-fill"></i>
           <h2>IoT Based Smart Automation</h2>
-          <p>The Internet of Things (IoT) is a significant advancement in digital transformation, redefining modern
+          <p (touchstart)="startLongPress('https://github.com/RishwithaGantla/IoT-Based-Smart-Automation')" 
+          (touchend)="cancelLongPress()"  
+          (mousedown)="startLongPress('https://github.com/RishwithaGantla/IoT-Based-Smart-Automation')"
+          (mouseup)="cancelLongPress()"
+          (mouseleave)="cancelLongPress()">The Internet of Things (IoT) is a significant advancement in digital transformation, redefining modern
             living and business. It connects virtual and physical layers, giving people more control and
             opportunities to stay connected. The smart home is an example of how IoT technologies work together and
             independently. This explores the implementation of an IoT smart home network using a Cisco Packet Tracer
